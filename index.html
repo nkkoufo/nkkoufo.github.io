@@ -2,48 +2,64 @@
 <html>
 <head>
   <link rel="shortcut icon" href="Favicon.ico"/>
-</head>
+
 <title>Website Home</title>
-<body>
+
 
   <style>
-  .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-}
-
-/* Position the content inside the overlay */
-.overlay-content {
-    position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
-}
-@media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  body {
+      font-family: 'Lato', sans-serif;
   }
-}
+  .overlay {
+      height: 0%;
+      width: 100%;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.9);
+      overflow-y: hidden;
+      transition: 0.5s;
+  }
+
+  .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+  }
+
+  .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+  }
+
+  .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+  }
+
+  .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
 
   .topn{
     background-color: #333;
@@ -78,31 +94,40 @@
 }
 
 </style>
+</head>
+<body>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeN()">&times;</a>
+    <div class="overlay-content">
+      <a>
+      about me text, i will now past a copy pasta in here to see how long text it treated
+
+1
+down vote
+favorite
+I wrote some html/css/javascript code that was taken verbatim from a javascript textbook. For some reason, the code does not run correctly in my browser (which is the newest version of Firefox). When I click the button, the javascript function "toggleStyle()" does not execute in the browser at ALL. This is the code for the button:
+</a>
+    </div>
+  </div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
 <div class ="topn" id="myt">
   <a class = "active" href = "index.html">Home</b>
   <a class = "left" href="#projects">Projects</a>
-  <a onclick ="openNav()">About me</a>
+  <a onclick ="openN()">About me</a>
   <a href="resume.html">Resume</a>
 </div>
-
-<!-- The overlay -->
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <p>This is test text that will be updated later with a about me</p>
-  </div>
-</div>
-
-<!-- Use any element to open/show the overlay navigation menu -->
-<script>
-function openNav() {
+<script type="text/javascript">
+function openN() {
     document.getElementById("myNav").style.height = "100%";
 }
 
-function closeNav() {
+function closeN() {
     document.getElementById("myNav").style.height = "0%";
 }
 </script>
+
+
 <h1 align = "middle">Nikos Koufos Software Engineer</h1>
 <div align = "middle">
   <img align = "middle" src="Crop.png"></div>
