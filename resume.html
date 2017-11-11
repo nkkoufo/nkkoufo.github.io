@@ -5,6 +5,13 @@
 
 <title>Resume</title>
   <style>
+  @media only screen and (min-width:600px){
+    .hide-on-desktop, * [aria-labelledby='hide-on-desktop'] {
+                display: none;
+                max-height: 0;
+                overflow: hidden;
+              }
+  }
   body {
       font-family: 'Lato', sans-serif;
   }
@@ -121,12 +128,12 @@
   }
   </script>
   <body align = "middle">
+    <div>
   <iframe align = "middle" src = "Resume2017 (1)n.pdf" width="900px" height="1150px">
   </iframe>
-  <object data="Resume2017 (1)n.pdf" type="application/pdf" width="100%" height="100%">
-  <p>Your web browser doesn't have a PDF plugin.
-  Instead you can <a href="Resume2017 (1)n.pdf">click here to
-  download the PDF file.</a></p>
-</object>
+    </div>
+    <div class="hide-on-desktop" aria-labelledby="hide-on-desktop" style="mso-hide: all;">
+      <img align = "middle" scr ="Resume2017 (1)n.jpg">
+    </div>
 </body>
 <html>
