@@ -5,13 +5,13 @@
 
 <title>Resume</title>
   <style>
-  @media only screen and (min-width:600px){
-    .hide-on-desktop, * [aria-labelledby='hide-on-desktop'] {
-                display: none;
-                max-height: 0;
-                overflow: hidden;
-              }
-  }
+  #mobileshow {
+display:none;
+}
+@media screen and (max-width: 500px) {
+#mobileshow {
+display:block; }
+}
   body {
       font-family: 'Lato', sans-serif;
   }
@@ -132,7 +132,7 @@
   <iframe align = "middle" src = "Resume2017 (1)n.pdf" width="900px" height="1150px">
   </iframe>
     </div>
-    <div class="hide-on-desktop" aria-labelledby="hide-on-desktop" style="mso-hide: all;">
+    <div id="mobileshow" aria-labelledby="hide-on-desktop" style="mso-hide: all;">
       <img align = "middle" scr ="Resume2017 (1)n.jpg">
     </div>
 </body>
