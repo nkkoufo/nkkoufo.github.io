@@ -2,22 +2,25 @@
 <html>
 <head>
   <link rel="shortcut icon" href="Favicon.ico"/>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Resume</title>
   <style>
-  @media only screen and (max-width: 639px) {
-     .mobile-only {
-       visibility: visible;
-       text-align: center;
-       font-weight:bold;
-       font-size:small;
-     }
-   }
-   @media only screen and (min-width: 640px) {
-     .mobile-only {
-       visibility: hidden;
-     }
-   }
+  img {
+  max-width: 100%
+}
+
+#div-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 701px) {
+  #div-mobile {
+    display: none;
+  }
+  #div-desktop {
+    display: block;
+  }
+}
   body {
       font-family: 'Lato', sans-serif;
   }
@@ -135,11 +138,11 @@
   }
   </script>
   <body align = "middle">
-    <div>
+    <div id = "div-desktop">
   <embed align = "middle" src = "Resume2017 (1)n.pdf" width="900px" height="1150px"/>
 
     </div>
-    <div align = "middle" class = "mobile-only">
+    <div align = "middle" id = "div-mobile">
 
         <img align = "middle" src ="Resume2017 (1)n.png" border = "1">
         <div>
